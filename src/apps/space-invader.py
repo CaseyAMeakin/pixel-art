@@ -2,13 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-#
+black = [0, 0, 0]
+greytile = [222, 222, 222]
+pinktile = [196, 139, 165]
+
+
 pallete = np.array(
     [
-        [222, 222, 222],  # 0: b
-        # [128, 0, 0],  # 1: w
-        # [236, 203, 221],  # 1: melanie
-        [196, 139, 165],  # 1:
+        # greytile,
+        pinktile,
+        greytile,
+        # [222, 222, 222],  # 0: b
+        # # [128, 0, 0],  # 1: w
+        # # [236, 203, 221],  # 1: melanie
+        # [196, 139, 165],  # 1:
     ],
 )
 
@@ -73,7 +80,9 @@ def main():
     ax.set_xticks(np.arange(-0.5, 10, 1), minor=True)
     ax.set_yticks(np.arange(-0.5, 10, 1), minor=True)
     ax.grid(which="minor", color="k", linestyle="-", linewidth=1)
-    plt.savefig("space-invader.png", dpi=600)
+
+    plt.savefig("space-invader-inverted.png", dpi=600)
+
     plt.show()
 
 
